@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+        let cola = []
+        const NUM_CLIENTES = 3
+        for (let i = 0; i < NUM_CLIENTES ; i++) {
+            cola.push("Cliente"+(i+1))
+        }
+        console.log(cola)
+    
+        
+        while (cola.length > 0) {
+         let atendido = cola.shift();
+         console.log (`Atendido: ${atendido}. Estado de la cola: 
+         [${cola}]`);
+         }
+
+      //  1. cola.shift() es la clave: En una estructura de datos de tipo
+       // cola (FIFO: el primero en entrar es el primero en salir), 
+      //  no puedes usar un bucle for tradicional con cola[i].
+        // Si usaras cola[i], estarías revisando al cliente pero no lo 
+      //  estarías quitando de la fila. Al usar shift(), sacas literalmente 
+         //al primer cliente de la lista.
+//2. El problema del bucle for original: Si modificas el array dentro de 
+//un bucle for convencional, su longitud (cola.length) se reduce en cada paso
+// mientras tu índice i aumenta. Esto hace que el bucle se salte elementos o 
+//  termine antes de tiempo. Por eso , es mucho más limpio usar un while 
+//  (cola.length > 0), que significa: "mientras siga habiendo gente en la 
+// cola,
+//   sigue atendiendo" El shift siempre quita un elemento del principio 
+//del array. 
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
