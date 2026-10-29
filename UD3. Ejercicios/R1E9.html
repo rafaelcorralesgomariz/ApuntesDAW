@@ -13,14 +13,36 @@
         let cola = []
         const NUM_CLIENTES = 3
         for (let i = 0; i < NUM_CLIENTES ; i++) {
-            cola.push("Cliente"+(i+1))
+            cola.push("cliente"+(i+1))
+             //Imprimir 
+        let impresionCola = ""
+        const SEPARADOR = "-"
+        for (let i = 0; i < NUM_CLIENTES; i++) {
+           impresionCola += cola[i] + SEPARADOR
         }
-        console.log(cola)
+
+        alert(impresionCola)
+
+        for (let i = 0; i < NUM_CLIENTES; i++) {
+            clienteAtendido = cola.shift()
+            console.log("Cliente atendido; " + clienteAtendido);
+            console.log("Estado de la cola: " + cola);
+            // "La cola ha sido atendida correctamente"
+            if (i < (NUM_CLIENTES - 1)) 
+
+            }
+    
+        
+        }
+            
+
+        alert(impresionCola)
+       
     
         
         while (cola.length > 0) {
          let atendido = cola.shift();
-         console.log (`Atendido: ${atendido}. Estado de la cola: 
+         alert (`Atendido: ${atendido}. Estado de la cola: 
          [${cola}]`);
          }
 
